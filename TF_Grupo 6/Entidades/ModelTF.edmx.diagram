@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ee49c7a4c76454cbae4fe6ce3000f40" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="dbTFModel.Beneficios" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Citas_Medicas" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Comentario" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Especialidad" Width="1.5" PointX="1.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Hospital" Width="1.5" PointX="1.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.HospitalMedico" Width="1.5" PointX="3.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Informacion_Adm" Width="1.5" PointX="3.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Medico" Width="1.5" PointX="1.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Notificaciones" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Paciente" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Respuesta" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Servicios" Width="1.5" PointX="3.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTFModel.Volunraio" Width="1.5" PointX="3.75" PointY="23.875" IsExpanded="true" />
+        <AssociationConnector Association="dbTFModel.Beneficios_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Citas_Medicas_HospitalMedico" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Citas_Medicas_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Reclamos_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Respuesta_Comentario" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.HospitalMedico_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Informacion_Adm_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Servicios_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Volunraio_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.HospitalMedico_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.Notificaciones_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="dbTFModel.MedicoEspecialidad" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

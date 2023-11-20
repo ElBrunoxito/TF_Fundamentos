@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Presentacion.Vistas.InicioView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentacion.Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="419" d:DesignWidth="630">
+    <Grid>
+        <Label Content="Bienvenido a EsSalud" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="330" FontSize="25" FontWeight="Bold" Foreground="#FFFBF5F5" Background="#FF0081C3" HorizontalContentAlignment="Center" Height="45" VerticalContentAlignment="Center"/>
+        <Border BorderBrush="Black" BorderThickness="3" Margin="35,85,50,34" CornerRadius="10,10,10,10">
+            <Label x:Name="label_descripcion" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="115" Width="264" FontSize="10" Margin="217,131,0,0"/>
+
+
+        </Border>
+        <Image x:Name="Imagen" HorizontalAlignment="Left" Height="180" Margin="70,165,0,0" VerticalAlignment="Top" Width="180"/>
+
+        <Label x:Name="label_titulo" Content="Label" HorizontalAlignment="Left" Margin="226,115,0,0" VerticalAlignment="Top" Height="30" Width="274" FontSize="15"/>
+        <Button x:Name="Derecha_tbn" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Click="Derecha_tbn_Click" Margin="525,208,0,0">
+            <Image Source="/Images/Flecha.png" Height="50" Width="35"/>
+        </Button>
+        <Button x:Name="Izquierda_tbn" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Click="Izquierda_tbn_Click" Margin="-2,208,0,0" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Image Source="/Images/Flecha.png" Height="50" Width="35"/>
+        </Button>
+    </Grid>
+</UserControl>

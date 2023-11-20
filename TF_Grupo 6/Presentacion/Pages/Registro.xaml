@@ -1,0 +1,59 @@
+﻿<Window x:Class="Presentacion.Pages.Registro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion"
+        mc:Ignorable="d"
+        Title="Registro" Height="610" Width="800">
+    <Grid Margin="0,0,0,-53">
+        <Label Content="Registro" HorizontalAlignment="Left" Margin="180,24,0,0" VerticalAlignment="Top" Width="83" FontSize="18" Foreground="#FF2F39DC" FontWeight="Bold" Height="34"/>
+        <Image HorizontalAlignment="Left" Height="651" VerticalAlignment="Top" Width="463" Source="/Images/fondoazul.png" Margin="467,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="121" Margin="578,172,0,0" VerticalAlignment="Top" Width="120" Source="/Images/essalud.PNG"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="180,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="Nombres" HorizontalAlignment="Left" Margin="45,76,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="47"/>
+        <TextBox x:Name="tbNombres" HorizontalAlignment="Left" Margin="45,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="44,119,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="48"/>
+        <TextBox x:Name="tbApellidos" HorizontalAlignment="Left" Margin="45,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <TextBox x:Name="tbDni" HorizontalAlignment="Left" Margin="45,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="DNI" HorizontalAlignment="Left" Margin="45,162,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="38"/>
+        <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="44,205,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="84"/>
+        
+        <DatePicker x:Name="dfechaN"  HorizontalAlignment="Left" Margin="44,225,0,0" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC" FontSize="9" SelectedDateChanged="dfechaN_SelectedDateChanged"/>
+
+
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="45,248,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="38"/>
+        <ComboBox x:Name="cbGenero" HorizontalAlignment="Left" Margin="45,264,0,0" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF1722D8">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF1722D8" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+
+
+        <Label Content="Direccion" HorizontalAlignment="Left" Margin="44,287,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="47"/>
+        <TextBox x:Name="tbDireccion" HorizontalAlignment="Left" Margin="44,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="44,330,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="83"/>
+        <TextBox x:Name="tbCorreoElectronico" HorizontalAlignment="Left" Margin="44,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="44,373,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="46"/>
+        <TextBox x:Name="tbTelefono" HorizontalAlignment="Left" Margin="45,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="41,416,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="55"/>
+        <PasswordBox x:Name="pbContraseña" HorizontalAlignment="Left" Margin="45,436,0,0" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Label Content="Confirmar contraseña" HorizontalAlignment="Left" Margin="41,459,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="95"/>
+        <PasswordBox x:Name="pbConfirmarContraseña" HorizontalAlignment="Left" Margin="45,479,0,0" VerticalAlignment="Top" Width="192" Height="18" BorderBrush="#FF2F39DC"/>
+        <Button x:Name="btnListo" Content="Listo" HorizontalAlignment="Left" Margin="161,513,0,0" VerticalAlignment="Top" Height="42" Width="180" FontWeight="Bold" FontSize="16" Background="White" BorderBrush="#FF241EEC" Click="btnListo_Click"/>
+        <Label x:Name="label_btn_ingresar" Content="Ingresar" HorizontalAlignment="Left" Margin="234,560,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF2F39DC" FontSize="8" Height="20" Width="42" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" MouseDown="label_btn_ingresar_MouseDown" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.194"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+    </Grid>
+</Window>

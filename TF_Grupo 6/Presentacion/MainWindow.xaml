@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentacion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="PrincipalWindow" Height="450" Width="800" Background="White">
+    <Grid Background="White" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <!--Rectangle HorizontalAlignment="Left" Height="276" Margin="211,68,0,0" Stroke="#FFE6E6E6" VerticalAlignment="Top" Width="458">
+            <Rectangle.Fill>
+               <ImageBrush ImageSource="/Images/essalud_logo.png"/>
+           </Rectangle.Fill>
+       </Rectangle> -->
+
+
+        <Grid x:Name="sidePanel" Background="#FF0259C0" HorizontalAlignment="Left" Width="150" Grid.ColumnSpan="2">
+            <StackPanel>
+                <Grid Height="26" Background="#FF0259C0" Margin="0,0,0.4,0">
+                    <Button HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Click="Button_Click" Width="45">
+                        <Image Source="/Images/bar.png"/>
+                    </Button>
+                </Grid>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="14" Foreground="White" BorderBrush="Transparent" Background="Transparent" FontWeight="Bold" Height="388" Margin="0,0,0.4,0" Width="120">
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                            <Image Source="/Images/home.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Inicio" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_1">
+                            <Image Source="/Images/cita.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Programa Cita" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_2">
+                            <Image Source="/Images/info.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Informacion" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_3">
+                            <Image Source="/Images/educa.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Educacion" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Margin="0,0,0,203">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_4">
+                            <Image Source="/Images/consulta.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Consultas" VerticalAlignment="Center" Foreground="#FF050505"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Margin="0,0,0,1">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_5">
+                            <Image Source="/Images/usuario.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="TB_Usuario" Margin="15 0 0 0" Text="Usuario" VerticalAlignment="Center" Foreground="#FF050505"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <ContentControl x:Name="contentControl" Content="" HorizontalAlignment="Left" Margin="70,0,0,0" VerticalAlignment="Top" Height="419" Width="630" Grid.Column="1"/>
+
+
     </Grid>
 </Window>

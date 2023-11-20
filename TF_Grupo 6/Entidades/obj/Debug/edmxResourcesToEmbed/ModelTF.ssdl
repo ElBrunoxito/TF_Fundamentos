@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbTFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Beneficios">
+    <Key>
+      <PropertyRef Name="idBeneficio" />
+    </Key>
+    <Property Name="idBeneficio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="int" Nullable="false" />
+    <Property Name="Paciente_DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Citas_Medicas">
+    <Key>
+      <PropertyRef Name="idCita" />
+    </Key>
+    <Property Name="idCita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="estadoDeLaCita" Type="varchar" MaxLength="30" />
+    <Property Name="duracion" Type="time" Precision="7" />
+    <Property Name="Consulta_EnLinea" Type="bit" Nullable="false" />
+    <Property Name="Paciente_DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="HospitalMedico_Medico_idMedico" Type="int" Nullable="false" />
+    <Property Name="HospitalMedico_Hospital_idHospital" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comentario">
+    <Key>
+      <PropertyRef Name="idComentario" />
+    </Key>
+    <Property Name="idComentario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Paciente_DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="idHospital" />
+    </Key>
+    <Property Name="idHospital" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="paginaWeb" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="fechaFundacion" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HospitalMedico">
+    <Key>
+      <PropertyRef Name="Medico_idMedico" />
+      <PropertyRef Name="Hospital_idHospital" />
+    </Key>
+    <Property Name="Medico_idMedico" Type="int" Nullable="false" />
+    <Property Name="Hospital_idHospital" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Informacion_Adm">
+    <Key>
+      <PropertyRef Name="idInformacion" />
+    </Key>
+    <Property Name="idInformacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Hospital_idHospital" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medico">
+    <Key>
+      <PropertyRef Name="idMedico" />
+    </Key>
+    <Property Name="idMedico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="genero" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="avatar" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedicoEspecialidad">
+    <Key>
+      <PropertyRef Name="Especialidad_idEspecialidad" />
+      <PropertyRef Name="Medico_idMedico" />
+    </Key>
+    <Property Name="Especialidad_idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="Medico_idMedico" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notificaciones">
+    <Key>
+      <PropertyRef Name="idNotificacion" />
+    </Key>
+    <Property Name="idNotificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Paciente_DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="genero" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="correoElectronico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="avatar" Type="image" Nullable="false" />
+    <Property Name="contasena" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Respuesta">
+    <Key>
+      <PropertyRef Name="Id_Respuesta" />
+    </Key>
+    <Property Name="Comentario_idComentario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Respuesta" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="idServicio" />
+      <PropertyRef Name="Hospital_idHospital" />
+    </Key>
+    <Property Name="idServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="costo" Type="real" Nullable="false" />
+    <Property Name="imagen" Type="image" Nullable="false" />
+    <Property Name="Hospital_idHospital" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Volunraio">
+    <Key>
+      <PropertyRef Name="idVoluntario" />
+    </Key>
+    <Property Name="idVoluntario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tipo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Horario" Type="datetime" Nullable="false" />
+    <Property Name="Hospital_idHospital" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Beneficios_Paciente">
+    <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
+    <End Role="Beneficios" Type="Self.Beneficios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paciente">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Beneficios">
+        <PropertyRef Name="Paciente_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Citas_Medicas_HospitalMedico">
+    <End Role="HospitalMedico" Type="Self.HospitalMedico" Multiplicity="1" />
+    <End Role="Citas_Medicas" Type="Self.Citas_Medicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HospitalMedico">
+        <PropertyRef Name="Medico_idMedico" />
+        <PropertyRef Name="Hospital_idHospital" />
+      </Principal>
+      <Dependent Role="Citas_Medicas">
+        <PropertyRef Name="HospitalMedico_Medico_idMedico" />
+        <PropertyRef Name="HospitalMedico_Hospital_idHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Citas_Medicas_Paciente">
+    <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
+    <End Role="Citas_Medicas" Type="Self.Citas_Medicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paciente">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Citas_Medicas">
+        <PropertyRef Name="Paciente_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HospitalMedico_Hospital">
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="1" />
+    <End Role="HospitalMedico" Type="Self.HospitalMedico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="idHospital" />
+      </Principal>
+      <Dependent Role="HospitalMedico">
+        <PropertyRef Name="Hospital_idHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HospitalMedico_Medico">
+    <End Role="Medico" Type="Self.Medico" Multiplicity="1" />
+    <End Role="HospitalMedico" Type="Self.HospitalMedico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medico">
+        <PropertyRef Name="idMedico" />
+      </Principal>
+      <Dependent Role="HospitalMedico">
+        <PropertyRef Name="Medico_idMedico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Informacion_Adm_Hospital">
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="1" />
+    <End Role="Informacion_Adm" Type="Self.Informacion_Adm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="idHospital" />
+      </Principal>
+      <Dependent Role="Informacion_Adm">
+        <PropertyRef Name="Hospital_idHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicoEspecialidad_Especialidad">
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+    <End Role="MedicoEspecialidad" Type="Self.MedicoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="MedicoEspecialidad">
+        <PropertyRef Name="Especialidad_idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicoEspecialidad_Medico">
+    <End Role="Medico" Type="Self.Medico" Multiplicity="1" />
+    <End Role="MedicoEspecialidad" Type="Self.MedicoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medico">
+        <PropertyRef Name="idMedico" />
+      </Principal>
+      <Dependent Role="MedicoEspecialidad">
+        <PropertyRef Name="Medico_idMedico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Notificaciones_Paciente">
+    <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
+    <End Role="Notificaciones" Type="Self.Notificaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paciente">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Notificaciones">
+        <PropertyRef Name="Paciente_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reclamos_Paciente">
+    <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
+    <End Role="Comentario" Type="Self.Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paciente">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Comentario">
+        <PropertyRef Name="Paciente_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Respuesta_Comentario">
+    <End Role="Comentario" Type="Self.Comentario" Multiplicity="1" />
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comentario">
+        <PropertyRef Name="idComentario" />
+      </Principal>
+      <Dependent Role="Respuesta">
+        <PropertyRef Name="Comentario_idComentario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Servicios_Hospital">
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="1" />
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="idHospital" />
+      </Principal>
+      <Dependent Role="Servicios">
+        <PropertyRef Name="Hospital_idHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Volunraio_Hospital">
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="1" />
+    <End Role="Volunraio" Type="Self.Volunraio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="idHospital" />
+      </Principal>
+      <Dependent Role="Volunraio">
+        <PropertyRef Name="Hospital_idHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbTFModelStoreContainer">
+    <EntitySet Name="Beneficios" EntityType="Self.Beneficios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Citas_Medicas" EntityType="Self.Citas_Medicas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comentario" EntityType="Self.Comentario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hospital" EntityType="Self.Hospital" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HospitalMedico" EntityType="Self.HospitalMedico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Informacion_Adm" EntityType="Self.Informacion_Adm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medico" EntityType="Self.Medico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedicoEspecialidad" EntityType="Self.MedicoEspecialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notificaciones" EntityType="Self.Notificaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Respuesta" EntityType="Self.Respuesta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Volunraio" EntityType="Self.Volunraio" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Beneficios_Paciente" Association="Self.Beneficios_Paciente">
+      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Beneficios" EntitySet="Beneficios" />
+    </AssociationSet>
+    <AssociationSet Name="Citas_Medicas_HospitalMedico" Association="Self.Citas_Medicas_HospitalMedico">
+      <End Role="HospitalMedico" EntitySet="HospitalMedico" />
+      <End Role="Citas_Medicas" EntitySet="Citas_Medicas" />
+    </AssociationSet>
+    <AssociationSet Name="Citas_Medicas_Paciente" Association="Self.Citas_Medicas_Paciente">
+      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Citas_Medicas" EntitySet="Citas_Medicas" />
+    </AssociationSet>
+    <AssociationSet Name="HospitalMedico_Hospital" Association="Self.HospitalMedico_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="HospitalMedico" EntitySet="HospitalMedico" />
+    </AssociationSet>
+    <AssociationSet Name="HospitalMedico_Medico" Association="Self.HospitalMedico_Medico">
+      <End Role="Medico" EntitySet="Medico" />
+      <End Role="HospitalMedico" EntitySet="HospitalMedico" />
+    </AssociationSet>
+    <AssociationSet Name="Informacion_Adm_Hospital" Association="Self.Informacion_Adm_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Informacion_Adm" EntitySet="Informacion_Adm" />
+    </AssociationSet>
+    <AssociationSet Name="MedicoEspecialidad_Especialidad" Association="Self.MedicoEspecialidad_Especialidad">
+      <End Role="Especialidad" EntitySet="Especialidad" />
+      <End Role="MedicoEspecialidad" EntitySet="MedicoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="MedicoEspecialidad_Medico" Association="Self.MedicoEspecialidad_Medico">
+      <End Role="Medico" EntitySet="Medico" />
+      <End Role="MedicoEspecialidad" EntitySet="MedicoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="Notificaciones_Paciente" Association="Self.Notificaciones_Paciente">
+      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Notificaciones" EntitySet="Notificaciones" />
+    </AssociationSet>
+    <AssociationSet Name="Reclamos_Paciente" Association="Self.Reclamos_Paciente">
+      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Comentario" EntitySet="Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Respuesta_Comentario" Association="Self.Respuesta_Comentario">
+      <End Role="Comentario" EntitySet="Comentario" />
+      <End Role="Respuesta" EntitySet="Respuesta" />
+    </AssociationSet>
+    <AssociationSet Name="Servicios_Hospital" Association="Self.Servicios_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Servicios" EntitySet="Servicios" />
+    </AssociationSet>
+    <AssociationSet Name="Volunraio_Hospital" Association="Self.Volunraio_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Volunraio" EntitySet="Volunraio" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

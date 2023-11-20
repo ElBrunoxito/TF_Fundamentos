@@ -1,0 +1,24 @@
+﻿<Window x:Class="Presentacion.Pages.VoluntarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion.Pages"
+        mc:Ignorable="d"
+        Title="VoluntarioWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="29,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hospital" HorizontalAlignment="Left" Margin="29,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tipo de Voluntariado:" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Horario:" HorizontalAlignment="Left" Margin="29,133,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="158,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <ComboBox x:Name="cmbHospital" HorizontalAlignment="Left" Margin="158,68,0,0" VerticalAlignment="Top" Width="214"/>
+        <TextBox x:Name="txtHorario" HorizontalAlignment="Left" Margin="158,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <DataGrid x:Name ="datagridVoluntariado" HorizontalAlignment="Left" Height="175" Margin="26,182,0,0" VerticalAlignment="Top" Width="615" SelectionChanged="datagridVoluntariado_SelectionChanged"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="514,43,0,0" VerticalAlignment="Top" Width="127" Click="btnRegistrar_Click"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="514,68,0,0" VerticalAlignment="Top" Width="127" Click="btnModificar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="514,93,0,0" VerticalAlignment="Top" Width="127" Click="btnEliminar_Click"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="514,118,0,0" VerticalAlignment="Top" Width="127" Click="btnSalir_Click"/>
+        <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Margin="158,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+    </Grid>
+</Window>

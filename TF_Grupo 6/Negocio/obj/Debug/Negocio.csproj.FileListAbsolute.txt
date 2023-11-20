@@ -1,0 +1,15 @@
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Negocio.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Negocio.pdb
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Datos.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Entidades.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\EntityFramework.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Datos.pdb
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Datos.dll.config
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Entidades.pdb
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\Entidades.dll.config
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\bin\Debug\EntityFramework.xml
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\obj\Debug\Negocio.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Negocio\obj\Debug\Negocio.pdb

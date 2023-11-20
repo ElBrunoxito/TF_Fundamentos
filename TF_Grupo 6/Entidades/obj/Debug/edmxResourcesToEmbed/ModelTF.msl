@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbTFModelStoreContainer" CdmEntityContainer="dbTFEntities">
+    <EntitySetMapping Name="Beneficios">
+      <EntityTypeMapping TypeName="dbTFModel.Beneficios">
+        <MappingFragment StoreEntitySet="Beneficios">
+          <ScalarProperty Name="idBeneficio" ColumnName="idBeneficio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Paciente_DNI" ColumnName="Paciente_DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Citas_Medicas">
+      <EntityTypeMapping TypeName="dbTFModel.Citas_Medicas">
+        <MappingFragment StoreEntitySet="Citas_Medicas">
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="estadoDeLaCita" ColumnName="estadoDeLaCita" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="Consulta_EnLinea" ColumnName="Consulta_EnLinea" />
+          <ScalarProperty Name="Paciente_DNI" ColumnName="Paciente_DNI" />
+          <ScalarProperty Name="HospitalMedico_Medico_idMedico" ColumnName="HospitalMedico_Medico_idMedico" />
+          <ScalarProperty Name="HospitalMedico_Hospital_idHospital" ColumnName="HospitalMedico_Hospital_idHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comentario">
+      <EntityTypeMapping TypeName="dbTFModel.Comentario">
+        <MappingFragment StoreEntitySet="Comentario">
+          <ScalarProperty Name="idComentario" ColumnName="idComentario" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Paciente_DNI" ColumnName="Paciente_DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidad">
+      <EntityTypeMapping TypeName="dbTFModel.Especialidad">
+        <MappingFragment StoreEntitySet="Especialidad">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hospital">
+      <EntityTypeMapping TypeName="dbTFModel.Hospital">
+        <MappingFragment StoreEntitySet="Hospital">
+          <ScalarProperty Name="idHospital" ColumnName="idHospital" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="paginaWeb" ColumnName="paginaWeb" />
+          <ScalarProperty Name="fechaFundacion" ColumnName="fechaFundacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HospitalMedico">
+      <EntityTypeMapping TypeName="dbTFModel.HospitalMedico">
+        <MappingFragment StoreEntitySet="HospitalMedico">
+          <ScalarProperty Name="Medico_idMedico" ColumnName="Medico_idMedico" />
+          <ScalarProperty Name="Hospital_idHospital" ColumnName="Hospital_idHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Informacion_Adm">
+      <EntityTypeMapping TypeName="dbTFModel.Informacion_Adm">
+        <MappingFragment StoreEntitySet="Informacion_Adm">
+          <ScalarProperty Name="idInformacion" ColumnName="idInformacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Hospital_idHospital" ColumnName="Hospital_idHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medico">
+      <EntityTypeMapping TypeName="dbTFModel.Medico">
+        <MappingFragment StoreEntitySet="Medico">
+          <ScalarProperty Name="idMedico" ColumnName="idMedico" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notificaciones">
+      <EntityTypeMapping TypeName="dbTFModel.Notificaciones">
+        <MappingFragment StoreEntitySet="Notificaciones">
+          <ScalarProperty Name="idNotificacion" ColumnName="idNotificacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Paciente_DNI" ColumnName="Paciente_DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paciente">
+      <EntityTypeMapping TypeName="dbTFModel.Paciente">
+        <MappingFragment StoreEntitySet="Paciente">
+          <ScalarProperty Name="contasena" ColumnName="contasena" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuesta">
+      <EntityTypeMapping TypeName="dbTFModel.Respuesta">
+        <MappingFragment StoreEntitySet="Respuesta">
+          <ScalarProperty Name="Comentario_idComentario" ColumnName="Comentario_idComentario" />
+          <ScalarProperty Name="Id_Respuesta" ColumnName="Id_Respuesta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="dbTFModel.Servicios">
+        <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="Hospital_idHospital" ColumnName="Hospital_idHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Volunraio">
+      <EntityTypeMapping TypeName="dbTFModel.Volunraio">
+        <MappingFragment StoreEntitySet="Volunraio">
+          <ScalarProperty Name="idVoluntario" ColumnName="idVoluntario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Horario" ColumnName="Horario" />
+          <ScalarProperty Name="Hospital_idHospital" ColumnName="Hospital_idHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MedicoEspecialidad" TypeName="dbTFModel.MedicoEspecialidad" StoreEntitySet="MedicoEspecialidad">
+      <EndProperty Name="Especialidad">
+        <ScalarProperty Name="idEspecialidad" ColumnName="Especialidad_idEspecialidad" />
+      </EndProperty>
+      <EndProperty Name="Medico">
+        <ScalarProperty Name="idMedico" ColumnName="Medico_idMedico" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

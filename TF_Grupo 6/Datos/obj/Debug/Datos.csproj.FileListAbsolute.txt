@@ -1,0 +1,15 @@
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Datos.dll.config
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Datos.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Datos.pdb
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Entidades.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\EntityFramework.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Entidades.pdb
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\Entidades.dll.config
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\EntityFramework.xml
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\obj\Debug\Datos.dll
+C:\Yo\Cursos\Fundamentos\Trabajo Final\TF_Grupo 6\Datos\obj\Debug\Datos.pdb
